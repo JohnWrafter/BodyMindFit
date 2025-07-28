@@ -1,6 +1,18 @@
-from django.http import HttpResponse
-from django.template import loader
+"""
+Views for home page
+"""
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
+from django.shortcuts import render
 
-def home(request):
-  template = loader.get_template('index.html')
-  return HttpResponse(template.render())
+# Internal:
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+def index(request):
+    """
+    A view to return the index page
+    """
+
+    return render(request, 'index.html')
