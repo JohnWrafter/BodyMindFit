@@ -1,0 +1,142 @@
+<!-- Main nav container -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+</style>
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Centered Logo</title>
+  <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+</head>
+<body>
+  
+  
+  <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-left nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    </ul
+
+    <ul class="nav-center">
+      <a class="navbar-brand" href="#">BodyMindFit</a>
+    </ul>
+
+    <ul class="nav-right nav-links">
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const links = document.querySelectorAll('.nav-links');
+      links.forEach(link => link.classList.toggle('active'));
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,11 +1,23 @@
 {% extends "base.html" %}
+{% load static %}
+
 
 <!DOCTYPE html>
+{% block content %}
+    <h1>Welcome to BodyMindFit</h1>
+    <p>Your journey to a healthier body and mind starts here!</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static 'media/fitness1.jpg' %}" class="img-fluid" alt="Fitness Image 1">
+            </div>
+           
+           
+           
+        </div>
+    </div>
+        
 <html>
 <body>
 
-<h1>Hello World!</h1>
-<p>Welcome to my first Django project!</p>
-
-</body>
-</html>
+{% endblock %}

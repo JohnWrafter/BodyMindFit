@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background-color: #f5eaee;
+  color: white;
+  position: relative;
+}
+
+.navbar-brand, .nav-left a,
+.nav-right a {
+color: #fe82e5 !important; 
+font-family: "Kaushan Script", cursive;
+
+}
+
+.navbar-brand {
+font-size: 25px;
+text-decoration: none;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.nav-left li,
+.nav-right li {
+margin: 0 10px;
+font-size: 24px;
+}
+
+.nav-left a,
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  color: #fe82e5 !important; 
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navbar-brand {
+    display: none; /* Hide logo on mobile */
+  }
+
+  .hamburger {
+    display: block;
+    align-self: flex-end;
+  }
+}
+
