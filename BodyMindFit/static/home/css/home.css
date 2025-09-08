@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
 }
 
@@ -7,31 +8,45 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #f5eaee;
   color: white;
   position: relative;
 }
 
-.nav-left, .nav-right {
-  display: flex;
-  gap: 15px;
+.navbar-brand, .nav-left a,
+.nav-right a {
+color: #fe82e5 !important; 
+font-family: "Kaushan Script", cursive;
+
 }
 
-.nav-left a, .nav-right a {
+.navbar-brand {
+font-size: 25px;
+text-decoration: none;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.nav-left li,
+.nav-right li {
+margin: 0 10px;
+font-size: 24px;
+}
+
+.nav-left a,
+.nav-right a {
   color: white;
   text-decoration: none;
-  padding: 8px;
-}
-
-.nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.logo {
-  height: 40px;
+  color: #fe82e5 !important; 
 }
 
 .hamburger {
@@ -41,28 +56,27 @@ body {
   color: white;
 }
 
-/* Responsive Styles */
+/* Responsive styles */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: center;
   }
 
-  .nav-left, .nav-right {
-    display: none;
+  .nav-left,
+  .nav-right {
     flex-direction: column;
     align-items: center;
-    margin: 5px 0;
+    display: none;
+    width: 100%;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .nav-center {
-    position: static;
-    transform: none;
-    margin: 10px 0;
+  .navbar-brand {
+    display: none; /* Hide logo on mobile */
   }
 
   .hamburger {
@@ -70,3 +84,4 @@ body {
     align-self: flex-end;
   }
 }
+
